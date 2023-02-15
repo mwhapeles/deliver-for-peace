@@ -1,7 +1,7 @@
 <body><script language="decker">
 {deck}
 version:1
-card:3
+card:5
 size:[512,342]
 name:"story.html"
 author:"Morgan Whapeles"
@@ -26,27 +26,67 @@ continue 1 to 2:{"type":"button","size":[85,20],"pos":[395,302],"script":"Cover.
 {card:begin the day}
 {widgets}
 job info:{"type":"field","size":[177,47],"pos":[166,134],"align":"center","value":"time: 5:15 am \n\ndate: monday, 15/35/200876"}
-sleep:{"type":"button","size":[225,25],"pos":[141,224],"text":"...it's too early...five more minutes"}
-get ready:{"type":"button","size":[226,24],"pos":[140,194],"script":"begin the day.0","text":"get up and ready for the day!"}
+sleep:{"type":"button","size":[225,25],"pos":[141,224],"script":"begin the day.0","text":"...it's too early...five more minutes"}
+get ready:{"type":"button","size":[226,24],"pos":[140,194],"script":"begin the day.1","text":"get up and ready for the day!"}
 
 {script:begin the day.0}
+on click do
+  go["slept in! oh no!"]
+end
+{end}
+
+{script:begin the day.1}
 on click do
   go["Next"]
 end
 {end}
 
-{card:card2}
+{card:chose good path}
 {widgets}
-button1:{"type":"button","size":[60,20],"pos":[226,161]}
+water:{"type":"button","size":[116,20],"pos":[226,161],"script":"chose good path.0","text":"across the river!"}
 start the day!:{"type":"field","size":[185,53],"pos":[198,99],"border":1,"scrollbar":0,"value":"you get ready to start the day! after a lovely breakfast you put on your uniform and grab your bag! time to get going! which path do you want to take today?"}
+rocky :{"type":"button","size":[209,20],"pos":[175,188],"script":"chose good path.1","text":"through the rocky path mountains!"}
 
-{card:card3}
+{script:chose good path.0}
+on click do
+  go["nice sea path"]
+end
+{end}
 
-{card:card4}
+{script:chose good path.1}
+on click do
+  go["rocky path begin"]
+end
+{end}
 
-{card:card5}
+{card:slept in! oh no!}
+{widgets}
+slept in!:{"type":"field","size":[177,51],"pos":[171,121],"script":"slept in! oh no!.0","value":"OH NO! you slept in past all of your alarms! there is no way you can deliver ALL of the mail! no time to eat breakfast! PANIC! where do you go??"}
+panic on the sea :{"type":"button","size":[413,39],"pos":[56,186],"text":"the ferry already left! the next one is in five minutes! better hurry! "}
+panic normal route :{"type":"button","size":[435,39],"pos":[51,234],"text":"continue your normal route but risk not being able to deliver all your mail!"}
 
-{card:card6}
+{script:slept in! oh no!.0}
+on change val do
+ 
+end
+{end}
+
+{card:nice sea path}
+{widgets}
+cross the river:{"type":"field","size":[267,59],"pos":[131,128],"value":"you made it to the ferry with plenty of time to spare! the captain of the ferry greets you with a grin. you hand him a letter from his pen pal. squealing, he rips it open with delight. congratulations! you delivered your first letter! the captain thanks you, asking if you would like to steer the ship. "}
+steer :{"type":"button","size":[266,32],"pos":[132,196],"text":"accept and steer the ship to the town!"}
+no :{"type":"button","size":[432,67],"pos":[47,240],"text":"politely turn down his offer, you're not ferry captain certified and don't\n feel comfy putting the safety \nof the other passengers on the ferry in your hands"}
+
+{card:rocky path begin}
+script:"rocky path begin.0"
+
+{script:rocky path begin.0}
+on view do
+ 
+end
+{end}
+
+{card:late for the ferry}
 
 {card:end}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AEUBDAD/APIBEAD/AO4BFAD/AOsBFgD/AOkBGAD/AOcBDgAHAQUA/wDlAQ0ACQEGAP8A4wEMAAwBBgD/AOIBCwANAQYA/wDiAQoADwEGAP8A4QEJABEBBQD/AOIBBwASAQYA/wDiAQUAEwEHAP8A4wEDABMBBwD/APkBEAD/AO8BFQD/AOsBGAD/AOgBGwD/AOUBHQD/AOMBDQAHAQsA/wDiAQcAEAEJAP8A4QEGABMBBwD/AOIBBAAWAQYA/wD7AQYA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD7AQYA/wD7AQYA/wDjAQMAFAEGAP8A4wEFABMBBgD/AOMBCwAKAQgA/wDkAR0A/wDkAR0A/wDlARsA/wDoARcA/wDwAQ4A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/g=="
