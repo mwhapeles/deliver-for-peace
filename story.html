@@ -1,7 +1,7 @@
 <body><script language="decker">
 {deck}
 version:1
-card:5
+card:8
 size:[512,342]
 name:"story.html"
 author:"Morgan Whapeles"
@@ -74,8 +74,14 @@ end
 {card:nice sea path}
 {widgets}
 cross the river:{"type":"field","size":[267,59],"pos":[131,128],"value":"you made it to the ferry with plenty of time to spare! the captain of the ferry greets you with a grin. you hand him a letter from his pen pal. squealing, he rips it open with delight. congratulations! you delivered your first letter! the captain thanks you, asking if you would like to steer the ship. "}
-steer :{"type":"button","size":[266,32],"pos":[132,196],"text":"accept and steer the ship to the town!"}
+steer :{"type":"button","size":[266,32],"pos":[132,196],"script":"nice sea path.0","text":"accept and steer the ship to the town!"}
 no :{"type":"button","size":[432,67],"pos":[47,240],"text":"politely turn down his offer, you're not ferry captain certified and don't\n feel comfy putting the safety \nof the other passengers on the ferry in your hands"}
+
+{script:nice sea path.0}
+on click do
+  go["sea docktown"]
+end
+{end}
 
 {card:rocky path begin}
 script:"rocky path begin.0"
@@ -87,6 +93,40 @@ end
 {end}
 
 {card:late for the ferry}
+
+{card:sea docktown}
+{widgets}
+seatown dockside:{"type":"field","size":[216,87],"pos":[151,115],"value":"the ferry sucessfully made it to the dock! welcome to seatown! this is a town by the sea. as the name may suggest. surprising, yes. as you get off the ferry and walk down the dock you are greeted by an open market and several shops. you've made great time today, it probably wouldn't hurt to do some browsing by the sea  before you continue your route. probably..."}
+shop!:{"type":"button","size":[208,25],"pos":[152,214],"script":"sea docktown.0","text":"treat yourself!! go shopping!"}
+continue route:{"type":"button","size":[225,25],"pos":[144,251],"text":"better not risk it! continue the route"}
+
+{script:sea docktown.0}
+on click do
+  go["shopping outcome"]
+end
+{end}
+
+{card:shopping outcome}
+
+{card:chase or get help?}
+
+{card:got your bag back!}
+
+{card:card5}
+
+{card:card6}
+
+{card:card7}
+
+{card:card8}
+
+{card:card9}
+
+{card:card10}
+
+{card:card11}
+
+{card:card12}
 
 {card:end}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AEUBDAD/APIBEAD/AO4BFAD/AOsBFgD/AOkBGAD/AOcBDgAHAQUA/wDlAQ0ACQEGAP8A4wEMAAwBBgD/AOIBCwANAQYA/wDiAQoADwEGAP8A4QEJABEBBQD/AOIBBwASAQYA/wDiAQUAEwEHAP8A4wEDABMBBwD/APkBEAD/AO8BFQD/AOsBGAD/AOgBGwD/AOUBHQD/AOMBDQAHAQsA/wDiAQcAEAEJAP8A4QEGABMBBwD/AOIBBAAWAQYA/wD7AQYA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD8AQUA/wD7AQYA/wD7AQYA/wDjAQMAFAEGAP8A4wEFABMBBgD/AOMBCwAKAQgA/wDkAR0A/wDkAR0A/wDlARsA/wDoARcA/wDwAQ4A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/g=="
