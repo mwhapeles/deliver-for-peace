@@ -1,7 +1,7 @@
 <body><script language="decker">
 {deck}
 version:1
-card:8
+card:6
 size:[512,342]
 name:"story.html"
 author:"Morgan Whapeles"
@@ -85,9 +85,19 @@ end
 
 {card:rocky path begin}
 script:"rocky path begin.0"
+{widgets}
+rocky mountains:{"type":"field","size":[253,68],"pos":[127,107],"value":"you begin your trek into the rocky terrain. you have a little difficulty walking around and through the coulders and rocks. halfway there you come across a woman who's cart had a broken wheel. you remember horror stories of staged ambush attacks. you can't let your letters be stolen! but what if she really needs help?"}
+help her!:{"type":"button","size":[281,39],"pos":[116,183],"text":"you feel in your heart you should help her. \nso you do!!!"}
+keep walking:{"type":"button","size":[281,39],"pos":[117,230],"script":"rocky path begin.1","text":"something doesn't feel right... catiously you\n keep walking"}
 
 {script:rocky path begin.0}
 on view do
+ 
+end
+{end}
+
+{script:rocky path begin.1}
+on click do
  
 end
 {end}
@@ -107,12 +117,28 @@ end
 {end}
 
 {card:shopping outcome}
+{widgets}
+shopping story:{"type":"field","size":[208,55],"pos":[145,121],"value":"you decide to look around the small booths and shops. everything is cute and quiant. a few more minutes won't hurt...right? a sudden tug at on your mail bag followed by a hard yank! your mailbag!! it was stolen!!! what do you do?"}
+chase!:{"type":"button","size":[306,35],"pos":[97,189],"script":"shopping outcome.0","text":"run after your bag!! you can't let them get away, \neveryone is depending on you!!"}
+ask for help:{"type":"button","size":[306,35],"pos":[97,232],"script":"shopping outcome.1","text":"yell for help!! more hands are better than one! "}
 
-{card:chase or get help?}
+{script:shopping outcome.0}
+on click do
+  go["run after them!"]
+end
+{end}
+
+{script:shopping outcome.1}
+on click do
+  go["get help!"]
+end
+{end}
+
+{card:get help!}
+
+{card:run after them!}
 
 {card:got your bag back!}
-
-{card:card5}
 
 {card:card6}
 
