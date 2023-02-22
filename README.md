@@ -13,4 +13,4 @@ text based adventure game
 * Sabrina Mazzeo, URL: (https://unsplash.com/photos/o0u02MsrBnw)
 * Kirikk Ermakov, URL:(https://unsplash.com/photos/W_VlMkt0oWA)
 *  
-*  Screenshot 2023-02-22 at 1.32.07 PM.png
+*  
